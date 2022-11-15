@@ -1,0 +1,51 @@
+defaults:
+  - _self_
+  - model: default
+  - spec: small
+
+# general options
+outdir: ~
+dry_run: False
+debug: False
+resume_run: ~
+cache_metrics_dir: ~
+
+snap: 50    # Snapshot interval [default: 50 ticks]
+imgsnap: 25
+metrics: ["fvd2048_16f"] #["fvd2048_16f", "fid50k_full"] #[ "fvd_proxy" , "fid50k_full"]
+seed: 2
+num_fp16_res: 4
+auto: False
+
+# dataset
+data: ~
+resolution: 256 #~
+cond: False
+subset: ~   # Train with only N images: <int>, default = all
+mirror: False
+nframes: 16
+
+# discriminator augmentation
+aug: noaug
+p: ~
+target: ~
+augpipe: ~
+
+# transfer learning
+resume: ~
+freezed: ~
+
+# performance options
+fp32: False
+nhwc: False
+allow_tf32: False
+nobench: False
+workers: 3
+
+launcher: "spawn"
+partition: ~
+comment: ~
+gpus: ~     # Number of GPUs to use [default: 1]
+port: ~
+nodes: ~
+timeout: ~

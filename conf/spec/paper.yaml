@@ -1,0 +1,12 @@
+name: paper
+ref_gpus: 4
+kimg: 25000
+mb: 32
+mbstd: 8
+fmaps: 1
+lrate: 0.0025
+lrate_disc: 0.0025
+gamma: 0.5
+ema: 20
+ramp: ~
+map: 8
